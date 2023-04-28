@@ -1,12 +1,12 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
-import bcrypt from 'bcrypt'
+// import bcrypt from 'bcrypt'
 import { User } from './user.entity'
 import { CreateUserDto } from './dto/createUser.dto'
 
 @Injectable()
-export class UsersService {
+export class UserService {
 	constructor(
 		@InjectRepository(User)
 		private usersRepository: Repository<User>,
